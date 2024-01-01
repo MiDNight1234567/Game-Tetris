@@ -1,0 +1,86 @@
+/* Заголовок */
+.title{
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  
+}
+.title_letter{
+  display: block;
+  z-index: 5;
+  color:  rgb(64, 245, 9);
+  text-shadow: 1.2rem 1.2rem 1rem rgba(116, 115, 115, .6);          
+}
+
+.title_letter:nth-child(1){
+  -webkit-animation: my-animation 2s;
+  animation: my-animation 2s;
+}
+.title_letter:nth-child(2){
+  -webkit-animation: my-animation 2.2s;
+  animation: my-animation 2.2s;
+}
+.title_letter:nth-child(3){
+  -webkit-animation: my-animation 2.4s;
+  animation: my-animation 2.4s;
+}
+.title_letter:nth-child(4){
+  -webkit-animation: my-animation 2.8s;
+  animation: my-animation 2.8s;
+}
+.title_letter:nth-child(5){
+  -webkit-animation: my-animation 3s;
+  animation: my-animation 3s;
+}
+.title_letter:nth-child(6){
+  -webkit-animation: my-animation 2.8s;
+  animation: my-animation 2.8s;
+}
+.title_letter:nth-child(7){
+  -webkit-animation: my-animation 2.2s;
+  animation: my-animation 2.2s;
+}
+.title_letter:nth-child(8){
+  -webkit-animation: my-animation 2s;
+  animation: my-animation 2s;
+}
+.title_letter:nth-child(9){
+  -webkit-animation: my-animation 2.8s;
+  animation: my-animation 2.8s;
+}
+.title_letter:nth-child(10){
+  -webkit-animation: my-animation 3s;
+  animation: my-animation 3s;
+}
+.title_letter:nth-child(11){
+  -webkit-animation: my-animation 2.2s;
+  animation: my-animation 2.2s;
+}
+.title_letter:nth-child(12){
+  -webkit-animation: my-animation 3s;
+  animation: my-animation 3s;
+}
+.title_letter:nth-child(13){
+  -webkit-animation: my-animation 2s;
+  animation: my-animation 2s;
+}
+.title_letter:nth-child(14){
+  -webkit-animation: my-animation 2.8s;
+  animation: my-animation 2.8s;
+}
+.title_letter:nth-child(15){
+  -webkit-animation: my-animation 3s;
+  animation: my-animation 3s;
+}
+.title_letter:nth-child(16){
+  -webkit-animation: my-animation 2.2s;
+  animation: my-animation 2.2s;
+}
+.title_letter:nth-child(17){
+  -webkit-animation: my-animation 2.4s;
+  animation: my-animation 2.4s;
+}
+.title_letter:nth-child(18){
+  -webkit-animation: my-animation 2s;
+  animation: my-animation 2s;
+}

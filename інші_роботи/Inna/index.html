@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tetris</title>
+  </head>
+  <body>
+    <div class="score">
+      <h3>Score:</h3>
+      <p>0</p>
+    </div>
+
+    <div class="tetris-wrapper">
+      <div class="title-wrapper">
+        <h1 class="title">Tetris game</h1>
+        <img src="./santa1.png" alt="santa" width="60" class="santa" />
+      </div>
+      <div class="tetris"></div>
+      <div class="buttons">
+        <div class="next-tetro">Here will be the next tetromino </div>
+        <button id="start">Start game</button>
+        <button id="pause"></button>
+
+        <div class="keyboard">
+          <button class="button-direction" id="rotate">Rotate</button>
+          <div class="keyboard-direction">
+            <button class="button-direction-sm" id="left">L</button>
+            <button class="button-direction-sm" id="down">D</button>
+            <button class="button-direction-sm" id="right">R</button>
+          </div>
+          <button class="button-direction" id="extraDown">Extra Down</button>
+        </div>
+      </div>
+    </div>
+    <div class="game-over">
+      <div class="animatedBlock">
+        <h4 class="game-over-title">Game over</h4>
+        <p>Your score is</p>
+        <p id="finalScore"></p>
+        <button id="startNewGame">Start new game</button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

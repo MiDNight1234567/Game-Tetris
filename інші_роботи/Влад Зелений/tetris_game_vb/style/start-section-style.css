@@ -1,0 +1,59 @@
+/* Стартова сторінка. */
+.start-section{
+  font-family: var(--font-roboto);
+  line-height: 1.2;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.start-section_title{
+  font-size: 2.3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 1rem;
+}
+.start-section_text-link{
+  color: white;
+  font-size: 1.8rem;
+  transition: all .3s;
+
+}
+.start-section_text-link:hover{
+  color: rgb(52, 137, 248);
+}
+.start-section_text{
+  font-size: 1.8rem;
+}
+
+
+.start-section_btn-start{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-family: var(--font-Handjet);
+  font-size: 2rem;
+  font-weight: 400;
+  padding: .5rem 1rem;
+  background: rgba(0, 0, 0, 0.514);
+ background: rgb(52, 230, 17);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 63, 4, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(116, 115, 115, 0.5);
+
+  color: white;
+  cursor: pointer;
+  border-radius: .5rem;
+  margin: 2rem auto;
+  opacity: .8;
+  transition: all .3s;
+}
+.img-btn-start{
+  display: inline-block;
+  width: 3rem;
+}
+.start-section_btn-start:hover{
+  opacity: 1;
+}

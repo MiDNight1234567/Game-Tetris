@@ -1,0 +1,327 @@
+@import url('https://fonts.cdnfonts.com/css/lvdc-game-over');
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+* {
+    margin: 0;
+}
+
+.game {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    gap: 32px;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.shaking {
+    animation: shake .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+body {
+    background: linear-gradient(90deg, rgb(83, 83, 209), rgb(200, 255, 255));
+    height: 100vh;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tetris {
+    background-color: rgb(90, 90, 237);
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(10, auto);
+}
+
+.nextTetro {
+    width: fit-content;
+    background-color: rgb(90, 90, 237);
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgb(255, 0, 0, 0.205);
+    border-radius: 0.3vh;
+    box-shadow: inset 2px 2px 2px rgba(128, 128, 128, 0.271),
+                inset -2px -2px 2px rgba(240, 0, 0, 0.271);
+}
+
+.nextTetro div {
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgb(255, 0, 0, 0.205);
+    border-radius: 0.3vh;
+    box-shadow: inset 2px 2px 2px rgba(128, 128, 128, 0.271),
+                inset -2px -2px 2px rgba(240, 0, 0, 0.271);
+}
+
+.score{
+    font-family: Arial;
+    font-size: 30px;
+    text-align: right;
+}
+
+.tetris .O, .nextTetro .O {
+    background: rgb(234, 234, 94);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(4, 59, 88, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);  
+}
+
+.tetris .L, .nextTetro .L {
+    background: rgb(103, 33, 202);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(4, 59, 88, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);     
+}
+
+.tetris .J, .nextTetro .J{
+    background: rgb(235, 221, 70);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(88, 63, 4, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);     
+}
+
+.tetris .I, .nextTetro .I{
+    background: rgb(0, 55, 255);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(4, 4, 88, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);     
+}
+
+.tetris .Z, .nextTetro .Z{
+    background: rgb(255, 72, 0);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(88, 32, 4, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);     
+}
+
+.tetris .T, .nextTetro .T{
+    background: rgb(255, 0, 174);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(85, 4, 88, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);     
+}
+
+.tetris .S, .nextTetro .S{
+    background: rgb(62, 191, 101);
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.213),
+        inset -3px -3px 3px rgba(4, 88, 43, 0.532),
+        12px 12px 24px rgba(0, 0, 0, 0.6);     
+}
+
+.container {
+  max-width: 200px;
+  max-height: 200px;
+  background: #4c1d95;
+  border-radius: 12px;
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 3px black;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.col-heading h1 {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+}
+
+.col-display {
+  width: 74px;
+  height: 100%;
+  background: #080001;
+  border-radius: 5px;
+  font-family: "Silkscreen", cursive;
+  font-size: 24px;
+  text-align: center;
+  color: #f94f6d;
+}
+
+.buttons-box {
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #8001ff;
+    border-radius: 4px;
+
+    padding: 8px;
+    font-size: 16px;
+    border-bottom: 4px solid #2b6cb0;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .modal {
+    font-family: 'LVDC Game Over 2', sans-serif;
+    color: azure;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .game {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .container {
+        height: 60px;
+    }
+
+    .button {
+        padding: 8px;
+        font-size: 8px;
+        font-weight: 300;
+        color: white;
+        line-height: 8px;
+    }
+    .buttons-control, .buttons-box {
+        display: none;
+    }
+    .board {
+        flex-direction: row;
+    }
+    .level {
+        display: none;
+    }
+}
+
+.level {
+    width: 60px;
+    font-size: 12px;
+}
+
+.menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px;
+}
+
+.title {
+    font-family: 'LVDC Game Over 2', sans-serif;
+    color: azure;
+    margin: auto;
+    font-size: 8px;
+    align-items: center;
+    gap: 12px;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+.bestScoresList {
+    list-style-type: none;
+    padding: 0;
+}

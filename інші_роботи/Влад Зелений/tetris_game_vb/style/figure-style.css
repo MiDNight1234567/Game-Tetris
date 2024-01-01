@@ -1,0 +1,102 @@
+/* Стилі фігур. */
+.playing-field div{
+  height: min(4vh, 7vw);
+  width: min(4vh, 7vw);
+  border-radius: 0.3vh;
+  border-right: 1px dashed rgba(178, 198, 243, 0.4);
+  padding: 1px;
+}
+
+/* W,P,R,B,Y,LY,I,O,V,G,LG */
+
+.W{
+  background: rgb(167, 167, 167);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(4, 59, 88, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6)
+}
+.P {
+  background: rgb(215, 77, 109);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 4, 22, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+.R {
+  background: rgb(240, 28, 28);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 4, 4, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6)
+}
+.B {
+  background: rgb(33, 162, 202);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(4, 59, 88, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.Y {
+  background: rgb(186, 177, 79);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 63, 4, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+.LY {
+  background: rgb(229, 255, 0);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 63, 4, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.I {
+  background: rgb(50, 92, 244);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(4, 4, 88, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.O {
+  background: rgb(215, 116, 77);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 32, 4, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.V{
+  background: rgb(194, 89, 235);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(85, 4, 88, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.G {
+  background: rgb(62, 191, 101);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(4, 88, 43, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.LG {
+  background: rgb(27, 255, 6);
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(4, 88, 43, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
+}
+
+.RED{
+  background: red;
+  box-shadow:
+    inset .3rem .3rem .3rem rgba(255, 255, 255, 0.213),
+    inset -.3rem -.3rem .3rem rgba(88, 4, 4, 0.532),
+    1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.6)
+}

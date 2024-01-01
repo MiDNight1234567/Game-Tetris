@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    height: 100svh;
+    background: linear-gradient(90deg, rgb(31, 31, 193), rgb(41, 188, 36));
+    user-select: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  position: relative;
+  gap: 20px;
+  padding: 0 100px;
+     /* background-color: rgba(11, 11,146, .3); */
+}
+
+
+.tetris {
+    background-color: rgb(86, 86, 220);
+    padding: 0.5vh;
+    border-radius: 0.3vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(20, auto);     
+}
+
+.tetris div {
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(208, 138, 138, 0.205);
+    border-radius: 0.3vh;
+    box-shadow: 
+        inset 2px 2px 2px rgba(52, 49, 49, 0.271),
+        inset -2px -2px 2px rgba(4, 21, 56, 0.271);
+}
+
+.tetris .O {
+    background: rgb(219, 222, 34);
+}
+
+.tetris .L {
+    background: rgb(6, 150, 9);
+}
+.tetris .J {
+    background: rgb(242, 120, 38);
+}
+.tetris .S {
+    background: rgb(149, 21, 155);
+}
+.tetris .Z {
+    background: rgb(84, 210, 238);
+}
+.tetris .T {
+    background: rgb(246, 59, 84);
+}
+.tetris .I {
+    background: rgb(246, 124, 221);
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+     width: 25%;
+    flex-wrap: wrap;
+justify-content: center;
+}
+
+.options div {
+   background: #e3df65;
+   padding: 10px;
+   text-transform: uppercase;
+   border-radius: 20px;
+   font-size: 16px;  
+   text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 25%;
+}
+
+.info-top {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.score {
+    
+    width: 100px;
+    height: 80px;
+    border-radius: 30px;
+    background: #e3df65;   
+    font-size: 48px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+}
+
+.restart-field {
+    font-size: 20px;
+    padding: 20px;    
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    background: rgb(233, 223, 21);
+    font-weight: 600;
+    color: rgb(7, 7, 66);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlls {
+   
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(252, 177, 36);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, 40px);
+}
+
+.controlls__item {
+    display: flex;
+    align-items: center;   
+    padding-left: 10px; 
+    cursor: pointer;   
+}
+
+.controlls__item img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.left-arrow {
+    transform: rotate(90deg);
+}
+
+.right-arrow {
+    transform: rotate(-90deg);
+}
+
+.space, .pause {
+    color:black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
+    background: rgba(8, 1, 29, 0.7);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 28px;
+    color: rgb(233, 223, 21);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+     visibility: visible;
+}
+
+.restart {
+    font-size: 32px;
+    padding: 30px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    background: rgb(233, 223, 21);
+    font-weight: 600;
+    color: rgb(7, 7, 66);
+    cursor: pointer;
+}
+
+
+

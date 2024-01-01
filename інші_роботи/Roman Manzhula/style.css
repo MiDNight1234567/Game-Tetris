@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(18, 18, 160), rgb(12, 239, 239));
+  height: 100vh;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tetris {
+  background-color: #aea9a9;
+  padding: 0.5vh;
+  border-radius: 0.5vh;
+  border: 2px solid #000;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(20, auto);
+  margin-right: 10px; /* Home work task #7*/
+}
+
+.tetris div {
+  height: min(4vh, 7vw);
+  width: min(4vh, 7vw);
+  background-color: rgba(97, 75, 75, 0.205);
+  border-radius: 0.3vh;
+  box-shadow: inset 2px 2px 2px rgba(128, 128, 128, 0.271),
+              inset -2px -2px 2px rgba(22, 87, 217, 0.271);
+}
+
+.tetris .O {
+/*   background: yellow;
+*/  background: var(--O-color);
+}
+
+.tetris .L {
+/*   background: rgb(10, 10, 92);
+ */  background: var(--L-color);
+}
+
+/* Home work task #2 */
+.tetris .J {
+/*   background: rgb(20, 227, 130);
+ */  background: var(--J-color);
+}
+
+.tetris .S {
+/*   background: rgb(199, 202, 201);
+ */  background: var(--S-color);
+
+}
+
+.tetris .Z {
+/*   background: rgb(180, 22, 127);
+ */  background: var(--Z-color);
+
+}
+
+.tetris .T {
+/*   background: rgb(1, 15, 10);
+ */  background: var(--T-color);;
+
+}
+
+.tetris .I {
+/*   background: rgb(111, 4, 4);
+ */  background: var(--I-color);
+
+}
+
+.tetris .P {
+/*   background: rgb(5, 5, 124);
+ */  background: var(--P-color);
+
+}
+
+/* Home work task #7*/
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.score {
+  padding: 5px;
+  background-color: #88ea95;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#score-label {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+#score-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4500; 
+}
+
+
+/* Home work 10 */
+.game-over {
+  position: fixed;
+  background-color: rgba(56, 48, 48, 0.8);
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.game-over h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.game-over p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.restart {
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff4500;
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.restart:hover {
+  background-color: #d13030;
+}
+
+/* Home work #11 and #12 */
+.tetris-container {
+  display: flex;
+  align-items: center;
+}
+
+.score-container {
+  margin-right: 3px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.game-controls > div {
+  display: flex;
+  flex-direction: column; /* Змінено на рядок */
+}
+
+.control-button {
+  margin: 2px;
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  background-color: #45a049;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: row; /* Змінено на стовпчик */
+}
+
+.next-tetromino-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.next-tetromino {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.next-tetromino div {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #000;
+}

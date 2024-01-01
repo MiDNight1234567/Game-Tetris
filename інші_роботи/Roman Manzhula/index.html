@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Home work task #7-->
+  <div class="tetris-container">
+    <div class="tetris"></div> 
+    <!-- Home work task #11 and #12-->
+    <div class="game-controls">
+      <div class="score-container">
+        <div class="score">
+          <span id="score-label">Score:</span>
+          <span id="score-value">0</span>
+        </div>
+      </div>
+      <!-- Home work task #13-->
+      <div class="next-tetromino-container">
+        <div class="next-tetromino"></div>
+      </div>
+      <div class="control-row">
+        <button class="control-button" onclick="rotateTetromino()">↻</button>
+        <div class="control-group">
+          <button class="control-button" onclick="moveTetrominoLeft()">←</button>
+          <button class="control-button" onclick="moveTetrominoDown()">↓</button>
+          <button class="control-button" onclick="moveTetrominoRight()">→</button>
+        </div>
+        <div class="control-group">
+          <button class="control-button" onclick="restartGame()">Restart</button>
+          <button class="control-button" onclick="dropTetrominoDown()">Space</button>
+          <button class="control-button" onclick="togglePause()">Pause</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-over" style="display: none;">
+    <h1>Game over!</h1>
+    <p>Your score: <span id="final-score">0</span></p>
+    <button class="restart">New Game</button>
+  </div>
+  
+
+  <script src="main.js"></script>
+</body>
+</html>

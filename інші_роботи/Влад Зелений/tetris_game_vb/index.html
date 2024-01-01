@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн-гра "Тетріс"</title>
+  <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <div class="main_page __hiden">
+    <header class="header">
+      <div class="header_wrap ">
+        <a class="logo" href="/">
+          <span class="logo_yllow">V</span><span class="logo_blue">B</span>
+        </a>
+        <!-- <h1> Контет генерується JS </h1> -->
+      </div>
+    </header>
+    <main class="main">
+
+      <section class="start-section">
+        <h2 class="start-section_title">Teтріс</h2>
+        
+        <p class="start-section_text">Відеогра-головоломка, створена 1984 року радянським програмістом Олексієм Пажитновим з колегами.</p>
+        <p class="start-section_text">Назву гри автор створив поєднавши грецький префікс «тетра-» зі словом «теніс».</p>
+        <p class="start-section_text">Гра в різних інтерпретаціях існує майже для кожної ігрової консолі та операційної системи, а також для інших пристроїв: мобільних телефонів, медіаплеєрів, кишенькових комп'ютерів тощо. <a class="start-section_text-link" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D1%82%D1%80%D1%96%D1%81" target="_blank" rel="noopener noreferrer">Докладніше на uk.wikipedia.org.</a></p>
+        <h2 class="start-section_title" >Пропоную вам спробувати мою версію популярної гри.</h2>
+        <p class="start-section_text">Управління:</p>
+        <p class="start-section_text">1.Старт/Пауза - 'Esc'</p>
+        <p class="start-section_text">2.Рух фігури Ліворуч/Праворуч - 'Стрілка ліворуч'/ 'Стрілка праворуч'</p>
+        <p class="start-section_text">3.Прискорення руху фігури вниз - 'Стрілка вниз'</p>
+        <p class="start-section_text">4.Падіння фігури - 'Пробіл'</p>
+        <p class="start-section_text">5.Обертання фігури - 'Стрілка вгору'</p>
+        <h2 class="start-section_title" >Приємної гри!</h2>
+        <button class="start-section_btn-start" type="button"><span>Почати гру</span> 
+          <img class="img-btn-start" src="./image/icons-svg/gaming_play.svg" alt="gaming play icon">
+        </button>
+      </section>
+
+      <section class="game">
+        <!-- Прихований заголовок. -->
+        <h2 class="visually-hidden">Секція гра</h2>
+        <!-- Елементи гри. -->
+        <div class="root">
+           <!-- Контет генерується JS -->
+          <div class="next-figure__wrap">
+            <!-- Контет генерується JS -->
+          </div>
+          <!-- Хмаринка -->
+          <img class="cloud-img" src="./image/cloud.png" alt="cloud">
+            
+          <div class="panel_progress-wrapp">
+            <!-- Максимальний результат -->
+            <div class="panel_progress">
+              <img class="progress_img" src="./image/icons-svg/mountain_flag.svg" alt="rating star">
+              <p class="max-progress">123<!-- Контет генерується JS --></p>
+            </div>
+            <!-- Поточний результат -->
+            <div class="panel_progress">
+              <img class="progress_img" src="./image/icons-svg/rating-star.svg" alt="rating star">
+              <p class="progress"><!-- Контет генерується JS --></p>
+            </div>
+          </div>
+        </div>
+        <!-- Бічна панель керування та інформації. -->
+        <div class="control-panel">
+
+          <!-- Панель "Складності гри". -->
+          <div class="panel_level">
+            <button data-id="noob" class="btn-level check" type="button">Легкий</button>
+            <button data-id="middle" class="btn-level" type="button">Середній</button>
+            <button data-id="pro" class="btn-level" type="button">Складний</button>
+          </div>
+
+          <!-- Панель "Старт/Пауза/Рестарт". -->
+          <div class="panel_start">
+              <!-- Кнопка "Старт/Пауза". -->
+            <button class="btn-start" type="button">
+              <img class="btn-start-img" src="./image/icons-svg/music-play.svg" alt="play">
+            </button>
+            <!-- Кнопка "Рестарт". -->
+            <button class="btn-restart" type="button">
+              <img class="btn-start-img" src="./image/icons-svg/play_cycle.svg" alt="cycle">
+            </button>
+          </div>
+
+          <!-- Панель "Керування фігурою". -->
+          <div class="btns">
+            <button data-id="ArrowUp" class="btn btn-rotate" type="button">↻</button>
+            <div class="btns-wrap">
+              <button data-id="ArrowLeft" class="btn btn-left" type="button">⇦</button>
+              <button data-id="ArrowDown" class="btn btn-down" type="button">⇩</button>
+              <button data-id="ArrowRight" class="btn btn-right" type="button">⇨</button>
+            
+            </div>
+            <button data-id="Space" class="btn btn-drop" type="button">
+              <img class="img-btn-drop" data-id="Space" src="./image/icons-svg/button_arrow.svg" alt="down arrow">
+            </button>
+          </div>
+        </div>
+        <button class="btn-home" type="button">
+          <span>&#10094;</span>
+          <img class="img-btn-home" src="./image/icons-svg/house.svg" alt="house">
+        </button>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-wrap">
+        <a class="footer_mail" href="mailto:brodich_vlad@ukr.net">brodich_vlad@ukr.net</a>
+        <p class="footer_date" lang="uk">30 Січня 2023р.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./code/index.js"></script>
+</body>
+</html>

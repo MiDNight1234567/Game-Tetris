@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Orbitron:wght@600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tetris:</h1>
+    <div class="container">
+      <div class="tetris"></div>
+      <div class="side-bar">
+        <div class="score">
+          <div class="level">
+            <h2>Level:</h2>
+            <p>0</p>
+          </div>
+          <div class="totalScore">
+            <h2>Score:</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="bestScore">
+          <h2>Best score:</h2>
+          <p>0</p>
+        </div>
+
+        <div class="newTetromino">
+          <h2>Next:</h2>
+          <div class="tetromino-field"></div>
+        </div>
+        <div class="moveBtn">
+          <button type="button" data-rotate>
+            <img src="./image/redo-svgrepo-com 1.svg" alt="" />
+          </button>
+
+          <button type="button" data-right>
+            <img src="./image/SVGRepo_iconCarrier.svg" alt="" />
+          </button>
+
+          <button type="button" data-left>
+            <img src="./image/SVGRepo_iconCarrier_Left.svg" alt="" /></button
+          ><button type="button" data-down>
+            <img src="./image/SVGRepo_iconCarrier_Down.svg" alt="" />
+          </button>
+        </div>
+        <div class="playBtn">
+          <div>
+            <button type="button" data-start class="startBtn">Start</button>
+            <button type="button" data-pause class="startBtn">Pause</button>
+          </div>
+          <button type="button" data-restart class="startBtn">Restart</button>
+        </div>
+      </div>
+    </div>
+    <div class="start-game">
+      <div class="start-game-container">
+        <h2>Hello, let's play Tetris</h2>
+        <form class="player-form" autocomplete="off">
+          <label>
+            Your Name is
+            <input type="text" name="name" autofocus />
+          </label>
+          <button type="submit">Let's Play</button>
+        </form>
+      </div>
+    </div>
+    <div class="game-over">
+      <div>
+        <h2>GAME OVER</h2>
+
+        <p>Hey, <span class="player-name">Anonymus</span></p>
+        
+        <ul class="score-list">
+          <li><p>Your level </p><p class="player-level">00</p></li>
+          <li><p>Your score </p><p class="player-score">0000</p></li>
+          <li><p>Best score </p><p class="best-score">0000</p></li>
+        </ul>
+        
+        
+        
+        <button class="restart">Restart</button>
+      </div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

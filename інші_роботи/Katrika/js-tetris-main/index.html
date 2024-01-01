@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/cf906a4f1b.js"
+      crossorigin="anonymous"></script>
+    <title>Tetris</title>
+  </head>
+  <body>
+    <div class="gameBoard">
+      <div class="tetris"></div>
+      <div class="board">
+        <div class="scoreBoard">
+          <div class="top">
+            Top:
+            <span class="topScore">0</span>
+          </div>
+          <div class="currentScore">
+            Score:
+            <span class="score">0</span>
+          </div>
+        </div>
+        <div class="upper-buttons">
+          <button class="button restart__button">Restart</button>
+          <button class="button pause__button">Pause</button>
+        </div>
+        <div class="lower-buttons">
+          <div class="direction-buttons">
+            <button class="button rotate__button">
+              <i class="fa-solid fa-rotate" style="color: #ffffff"></i>
+            </button>
+            <div>
+              <button class="button left__button">
+                <i class="fa-solid fa-left-long" style="color: #ffffff"></i>
+              </button>
+              <button class="button right__button">
+                <i class="fa-solid fa-right-long" style="color: #ffffff"></i>
+              </button>
+            </div>
+            <button class="button down__button">
+              <i class="fa-solid fa-down-long" style="color: #ffffff"></i>
+            </button>
+          </div>
+          <div>
+            <button class="button drop__button">
+              <i class="fa-solid fa-caret-down" style="color: #ffffff"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-over" id="gameOverBlock">
+      <p class="game-over_banner">Game over</p>
+      <div class="currentScore outside-score__banner">
+        Total score:
+        <span class="score">0</span>
+      </div>
+      <button class="outside_button button restart__button">
+        Restart game
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
